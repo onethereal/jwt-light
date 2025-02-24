@@ -1,0 +1,4 @@
+/vendor
+/build
+docker-compose.local.yml
+composer.lock

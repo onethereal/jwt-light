@@ -1,0 +1,28 @@
+{
+  "name": "onethereal/jwt-light",
+  "description": "Lightweight JSON Web Token implementation in PHP",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Evgeny Ramazanov",
+      "email": "ev.ramazanoff@gmail.com",
+      "homepage": "https://github.com/onethereal"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "onethereal\\JWTLight\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "onethereal\\JWTLight\\tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "12.0.2"
+  },
+  "require": {
+    "php": ">=8.3.0"
+  }
+}
