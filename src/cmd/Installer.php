@@ -10,7 +10,7 @@ final readonly class Installer
     {
         $envFile = getcwd() . '/.env';
         $jwtLightSecretName = EnvEnum::SECRET_KEY->value;
-        $envTemplate = "### onethereal/JWTLight\n$jwtLightSecretName=\n### <onethereal/JWTLight\n";
+        $envTemplate = "\n### onethereal/JWTLight\n$jwtLightSecretName=\n### <onethereal/JWTLight\n";
 
         if (!file_exists($envFile)) {
             file_put_contents($envFile, $envTemplate);
