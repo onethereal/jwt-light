@@ -13,7 +13,8 @@ final class JWT
     public function __construct(private ?string $secretKey = null)
     {
         $jwtLightSecretKeyName = EnvEnum::SECRET_KEY->value;
-        $this->secretKey = $secretKey ?? getenv($jwtLightSecretKeyName)
+        $fromGlobalEnv = $_ENV[$jwtLightSecretKeyName] ?? null;
+        $this->secretKey = $secretKey ?? $fromGlobalEnv
             ?: throw new InvalidArgumentException(message: "Secret key must be provided via argument or $jwtLightSecretKeyName environment variable");
     }
 

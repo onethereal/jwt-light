@@ -4,5 +4,5 @@ namespace onethereal\JWTLight\enum;
 
 enum EnvEnum: string
 {
-    case SECRET_KEY = 'JWS_LIGHT_SECRET';
+    case SECRET_KEY = 'JWT_LIGHT_SECRET_KEY';
 }
