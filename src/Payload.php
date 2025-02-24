@@ -88,7 +88,7 @@ final class Payload
         return $this->claims[$key] ?? null;
     }
 
-    public function setClaim(string $key, string|int|float|bool|null|array $value): self
+    public function addClaim(string $key, string|int|float|bool|null|array $value): self
     {
         $this->claims[$key] = $value;
         return $this;

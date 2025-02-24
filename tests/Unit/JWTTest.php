@@ -46,7 +46,7 @@ class JWTTest extends TestCase
             ->setIssuer('https://example.com')
             ->setSubject('user123')
             ->setExpiration(time() + 3600)
-            ->setClaim('role', 'admin');
+            ->addClaim('role', 'admin');
 
         $token = $this->jwt->encode($payload, HashAlgorithmEnum::HS256);
         $decodedPayload = $this->jwt->decode($token);

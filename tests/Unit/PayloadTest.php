@@ -65,7 +65,7 @@ class PayloadTest extends TestCase
 
     public function testSetAndGetCustomClaim(): void
     {
-        $this->payload->setClaim('role', 'admin');
+        $this->payload->addClaim('role', 'admin');
         $this->assertEquals('admin', $this->payload->getClaim('role'));
     }
 
@@ -80,7 +80,7 @@ class PayloadTest extends TestCase
         $this->payload
             ->setIssuer('foo.bar')
             ->setSubject('Tyler Durden')
-            ->setClaim('role', 'admin');
+            ->addClaim('role', 'admin');
 
         $expected = [
             'iss' => 'foo.bar',
